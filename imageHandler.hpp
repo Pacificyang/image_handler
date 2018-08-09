@@ -11,7 +11,6 @@
 #include "core.hpp"
 #include "imgproc.hpp"
 #include "highgui.hpp"
-
 #include "HSL.hpp"
 
 using namespace std;
@@ -26,22 +25,22 @@ public:
      string image_window;
 	 string image_dir;
      QString m_path;
-     Mat src,dst,now;
+     Mat src,dst,now,afterHSL,afterBC;
 
      HSL hsl;
      int color;
-     int hue;
-     int saturation;
-     int lightness;
+     int hue,last_hue;
+     int saturation,last_saturation;
+     int lightness,last_lightness;
 
     //=====亮度对比度====
-     int brightness;
-     int contrast;
+     int brightness,last_brightness;
+     int contrast,last_contrast;
 
     //RGB
-     int r;
-     int g;
-     int b;
+     int r,last_r;
+     int g,last_g;
+     int b,last_b;
 
      explicit ImageHandler(QObject *parent = nullptr);
      //explicit ImageHandler();

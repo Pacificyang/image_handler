@@ -9,12 +9,16 @@ Rectangle {
 
     MouseArea {
         id: mouseArea
+        anchors.rightMargin: 0
+        anchors.bottomMargin: 0
+        anchors.leftMargin: 0
+        anchors.topMargin: 0
         anchors.fill: parent
     }
 
     TextEdit {
         id: textEdit
-        text: qsTr("open image")
+        text: qsTr("choose image path")
         verticalAlignment: Text.AlignVCenter
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
